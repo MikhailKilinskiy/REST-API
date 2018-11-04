@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Simple RESTful API</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="buttons.js"></script>
+</head>
+<body>
+    <div class="panel well">
+        <a id="back" href="/" style="display: none"><h2>Back to items</h2></a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>NotificationId</th>
+                    <th>PurchaseNumber</th>
+                    <th>DocPublishDate</th>
+                    <th>PurchaseObjectInfo</th>
+                    <th>PlacingWayCode</th>
+                    <th>ETPCode</th>
+                    <th>MaxPriceSum</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+        <div class="panel" style="padding-left: 25px; padding-bottom: 25px;">
+            <h3>Create or edit Notification</h3>
+            <div class="form-group" style="width: 300px">
+                <div class="form-group" style="width: 300px">
+                    <label>NotificationId (only for updating items)</label> <input id="NotificationId2" class="form-control input-lg">
+                </div>
+                <label>PurchaseNumber</label> <input id="PurchaseNumber" class="form-control input-lg" />
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label>DocPublishDate</label> <input id="DocPublishDate" class="form-control input-lg" />
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label>PurchaseObjectInfo</label> <input id="PurchaseObjectInfo" class="form-control input-lg" />
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label>PlacingWayCode</label> <input id="PlacingWayCode" class="form-control input-lg" />
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label>ETPCode</label> <input id="ETPCode" class="form-control input-lg" />
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label>MaxPriceSum</label> <input id="MaxPriceSum" class="form-control input-lg" />
+            </div>
+            <button id="update" class="btn btn-warning btn-lg">Update item by ID</button>
+            <button id="create" class="btn btn-success btn-lg">Create Item</button>
+        </div> </div>
+        <div class="col-md-3">
+        <div class="panel" style="padding-left: 25px; padding-bottom: 25px;">
+            <h3>View or delete item</h3>
+            
+            <div class="form-group" style="width: 300px">
+                <label>NotificationId</label> <input id="NotificationId1" class="form-control input-lg">
+            </div>
+            <button id="select" class="btn btn-info btn-lg">View item by ID</button>
+            <button id="delete" class="btn btn-danger btn-lg">Delete item by ID</button>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
